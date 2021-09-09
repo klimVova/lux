@@ -1,0 +1,32 @@
+.button {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: $luxewill-black;
+  background-color: $luxewill-primary;
+  border-radius: 33px;
+  padding: 17px 49px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #ffb572;
+  }
+  &--secondary {
+    background-color: $luxewill-gray;
+    margin: 0;
+
+    &:hover {
+      background-color: #e0dfdf;
+    }
+  }
+  &--contact {
+    background-color: $luxewill-black;
+    color: $luxewill-gray-three;
+
+    &:hover {
+      background-color: $luxewill-black;
+    }
+  }
+}

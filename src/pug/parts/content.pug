@@ -1,0 +1,203 @@
+include ../mixins/heading.pug
+include ../mixins/button.pug 
+include ../mixins/success.pug
+include ..//mixins/paragraph.pug
+include ..//mixins/number.pug
+include ..//mixins/input.pug
+include ..//mixins/phones.pug
+include ..//mixins/mail.pug
+.main
+ section.hero
+  .container
+   .row 
+    .col-12.col-md-6
+     +heading('We differentiate ourselves by building strategic' , 'hero__heading')
+     +paragraph('We differentiate ourselves by building strategic long-term partnerships with our clients and providing exceptional quality services at' , 'hero__paragraph')
+     .hero__buttons
+      +button('Contact us', '#', 'page-contact', 'hero__button')
+      +button('Our services', '#', 'page-contact', 'button--secondary hero__button')
+    .col-12.col-md-6
+      img(src="./images/photo1.png" class="hero__image")
+ section.features
+  .container--small
+    .row 
+      .col-12.col-md-4             
+        img(src="./images/chart.png")
+        h4.feature__heading.heading.heading__small Feature number one 
+        +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small') 
+      .col-12.col-md-4             
+        img(src="./images/chart2.png")
+        h4.feature__heading.heading.heading__small Feature number two
+        +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small')
+      .col-12.col-md-4             
+        img(src="./images/chart3.png")
+        h4.feature__heading.heading.heading__small Feature number three
+        +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small') 
+ section.development
+  .container.container--medium 
+   +heading('We deliver full-cycle project development' , 'development__heading heading__medium') 
+   .row
+     .col-12.col-md-6
+       img(src="./images/photo2.png") 
+     .col-12.col-md-6
+      +paragraph('We identify your business objectives' , 'paragraph__small paragraph--border')
+      +paragraph('Set project plans and timelines' , 'paragraph__small paragraph--border')
+      +paragraph('Design interfaces and write use cases' , 'paragraph__small paragraph--border')
+      +paragraph('Create the overall look and feel of a product, develop UI and functionality' , 'paragraph__small paragraph--border')
+      +paragraph('Test the finished application, publish it to a store, and provide further support' , 'paragraph__small paragraph--border')
+   .row  
+     .col-12.col-md-6
+      +paragraph('Our Mission is to delight our clients in the quality of our software development service and provide an attractive job opportunity environment for our teams' , 'paragraph__small paragraph__development') 
+     .col-12.col-md-6
+      +paragraph('Our values shape the way we work with our clients, delivering outstanding user experience supported by cutting-edge technologies' , 'paragraph__small paragraph--top') 
+   .row  
+     .col-12.col-md-6.devbottom 
+ section.success-block
+  .row
+   .col-12.col-md-3
+    +number('350+')
+    +success('Compleated projects') 
+   .col-12.col-md-3
+    +number('200+ '  )
+    +success('Qualified employees')
+   .col-12.col-md-3
+    +number('10+'  )
+    +success('Countries with clients')
+   .col-12.col-md-3
+    +number('12'  )
+    +success('Years of experience') 
+ section.development-block
+  .container.container--big 
+   +heading('We deliver full-cycle project development' , 'development__heading heading__medium') 
+   .row
+     .col-12.col-md-3
+      .feature__block
+       h4.developments__heading.heading.heading__small Mobile Development
+       +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small') 
+     .col-12.col-md-3
+      .feature__block
+       h4.developments__heading.heading.heading__small Front End and Back End
+       +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small')
+     .col-12.col-md-3
+      .feature__block
+       h4.developments__heading.heading.heading__small Product Design
+       +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small')
+     .col-12.col-md-3
+      .feature__block 
+       h4.developments__heading.heading.heading__small Product Testing
+       +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small')  
+     .col-12.col-md-3
+      .feature__block 
+       h4.developments__heading.heading.heading__small Service Support
+       +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small')
+     .col-12.col-md-3
+      .feature__block 
+       h4.developments__heading.heading.heading__small Product Research
+       +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small')
+     .col-12.col-md-3
+      .feature__block 
+       h4.developments__heading.heading.heading__small Outsourcing
+       +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small')      
+ section.description
+  .container--description
+   .row
+    .col-12.col-md-6
+      +heading('How we are working' , ' heading__description')
+    .col-12.col-md-6
+      +paragraph('Create beautiful, fast, and secure software tailored precisely to your business goals' , 'feature__paragraph paragraph__description')
+   .row
+    .col-12.col-md-3
+     .p.description__number 01
+     .p.description__plans Project Kickoff
+    .col-12.col-md-3
+     .p.description__number 02
+     .p.description__plans Ideation and Evaluation
+    .col-12.col-md-3
+     .p.description__number 03
+     .p.description__plans Design Process
+    .col-12.col-md-3
+     .p.description__number 04
+     .p.description__plans Development Process       
+ section.specialized 
+  .container.container--specialized  
+   +heading('Our team is specialized in a wide array of industry verticals' , 'development__heading heading__medium') 
+   .row
+     .col-12.col-md-3
+      .specialization
+       img(src="./images/icon-banking.png")
+       +paragraph('Banking & Finance' , ' paragraph__specialized') 
+     .col-12.col-md-3
+      .specialization
+       img(src="./images/icon-retail.png")
+       +paragraph('Retail & E-Commerce' , ' paragraph__specialized') 
+     .col-12.col-md-3
+      .specialization
+       img(src="./images/icon-travel.png")
+       +paragraph('Travel & Tourism' , ' paragraph__specialized') 
+     .col-12.col-md-3
+      .specialization 
+       img(src="./images/icon-education.png")
+       +paragraph('Education & E-Learning' , ' paragraph__specialized')   
+     .col-12.col-md-3
+      .specialization 
+       img(src="./images/icon-digital.png")
+       +paragraph('Digital & Marketing' , ' paragraph__specialized') 
+     .col-12.col-md-3
+      .specialization 
+       img(src="./images/icon-logistics.png")
+       +paragraph('Logistics & Transportation' , 'specialized__paragraph paragraph__specialized') 
+     .col-12.col-md-3
+      .specialization
+       img(src="./images/icon-media.png")
+       +paragraph('Media & Entertainment' , 'specialized__paragraph paragraph__specialized')
+     .col-12.col-md-3
+      .specialization
+       img(src="./images/icon-publishing.png")
+       +paragraph('Publishing & Advertising' , 'specialized__paragraph paragraph__specialized')
+     .col-12.col-md-3
+      .specialization
+       img(src="./images/icon-healthcare.png")
+       +paragraph('Healthcare' , 'specialized__paragraph paragraph__specialized')
+     .col-12.col-md-3
+      .specialization
+       img(src="./images/icon-technology.png")
+       +paragraph('Technology' , 'specialized__paragraph paragraph__specialized')
+     .col-12.col-md-3
+      .specialization
+       img(src="./images/icon-automotive.png")
+       +paragraph('Automotive' , 'specialized__paragraph paragraph__specialized')
+ section.contacts
+  .container.container--big 
+   .row
+    .col-12.col-md-6
+      .contact
+       h4.contacts__heading.heading.heading__contacts Let’s talk
+       +paragraph('Get Custom Solutions, Recommendations, Resumes, or, Estimates. Confidentiality & Same Day Response Guaranteed! ' , 'feature__paragraph paragraph__contacts') 
+    .col-12.col-md-6
+      .contact
+       +input-text('','text' , 'Your Name')
+      .hero__buttons 
+       +button('Contact us', '#', 'page-contact', 'button--contact hero__button')
+ section.features
+  .container--features
+    .row 
+      .col-12.col-md-4
+       .feature
+        img(src="./images/icon-location.png")
+        h4.feature__heading.heading.heading__small Our location
+        +paragraph('2118 Thornridge Cir. Syracuse, Connecticut 35624' , ' paragraph__location') 
+      .col-12.col-md-4
+       .feature
+        img(src="./images/icon-phone.png")
+        h4.heading.heading__small Phone
+        .phones 
+          a.paragraph__phone(href='tel:(+33)6 55 59 32 88') (+33)6 55 59 32 88
+        .phones 
+          a.paragraph__phone(href='tel:(+33)7 00 55 59 27') (+33)7 00 55 59 27 
+      .col-12.col-md-4
+       .feature
+        img(src="./images/icon-mail.png")
+        h4.heading.heading__small Email
+        a(href='mailto:deanna.curtis@example.com').paragraph__mail deanna.curtis@example.com
+
+

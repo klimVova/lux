@@ -1,0 +1,11 @@
+mixin input-text(value, type, placeholder)
+    - var type = text
+    case type
+        when date
+            input.form-control.input-fons(type="text" placeholder="Your Name" value=value)
+            input.form-control.input-fons(type="mail" placeholder="Your Email" value=value)
+            input.form-control.input-fons(type="text" placeholder="Company" value=value)
+            input.form-control.input-fons(type="text" placeholder="Your Message" value=value)
+        default
+            input.form-control.input-fons(type=type placeholder="asd" value=value)
+
