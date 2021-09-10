@@ -106,18 +106,16 @@ include ..//mixins/mail.pug
     .col-12.col-md-6
       +paragraph('Create beautiful, fast, and secure software tailored precisely to your business goals' , 'feature__paragraph paragraph__description')
    .row
-    .col-12.col-md-3
-     .p.description__number 01
-     .p.description__plans Project Kickoff
-    .col-12.col-md-3
-     .p.description__number 02
-     .p.description__plans Ideation and Evaluation
-    .col-12.col-md-3
-     .p.description__number 03
-     .p.description__plans Design Process
-    .col-12.col-md-3
-     .p.description__number 04
-     .p.description__plans Development Process       
+    .col-12
+      .about-us
+        ul.about-us__list
+          each val, key in { 1: 'Project Kickoff', 2: 'Ideation and Evaluation', 3: 'Design Process', 4: 'Development Process' }
+            li.about-us__item
+              .about-us-block
+                .about-us-block__count= key
+                .about-us-block__circle-container 
+                  .about-us-block__circle
+                div.about-us-block__heading= val
  section.specialized 
   .container.container--specialized  
    +heading('Our team is specialized in a wide array of industry verticals' , 'development__heading heading__medium') 
