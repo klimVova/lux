@@ -1,0 +1,130 @@
+.heading {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 64px;
+  line-height: 70px;
+  letter-spacing: 0.01em;
+
+  &__small {
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 13px;
+    margin-bottom: 15px;
+  }
+
+  &__medium {
+    font-size: 48px;
+    line-height: 65px;
+    text-align: center;
+  }
+
+  &__contakts {
+    font-size: 48px;
+    line-height: 71px;
+    text-align: srart;
+  }
+  &__description {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 65px;
+    color: $luxewill-gray-four;
+    letter-spacing: 0em;
+
+    &__number {
+      color: white;
+    }
+  }
+}
+
+.paragraph {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.01em;
+  color: rgba($luxewill-black, 0.8);
+
+  &__small {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__development {
+    padding-top: 60px;
+  }
+  &__specialized {
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba($luxewill-black, 1);
+    margin-top: 15px;
+  }
+
+  &__contacts {
+    font-size: 20px;
+    line-height: 29px;
+    color: rgba($luxewill-black, 0.8);
+    margin-top: 25px;
+  }
+  &__location {
+    font-size: 16px;
+    line-height: 19px;
+    color: rgba($luxewill-black, 0.8);
+  }
+  &__privacy {
+    font-family: Noto Sans;
+    margin-left: 20px;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba($luxewill-black, 0.5);
+    &:hover {
+      color: $luxewill-black;
+    }
+  }
+  &__copy {
+    font-family: Noto Sans;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba($luxewill-black, 0.5);
+  }
+  &__mail {
+    font-size: 16px;
+    line-height: 19px;
+    width: 220px;
+    text-decoration: none;
+    color: rgba($luxewill-black, 0.8);
+  }
+  &__phone {
+    font-size: 16px;
+    line-height: 19px;
+    width: 220px;
+    text-decoration: none;
+    color: rgba($luxewill-black, 0.8);
+  }
+
+  &__description {
+    font-size: 16px;
+    line-height: 19px;
+    color: $luxewill-gray-four;
+    padding-top: 80px;
+  }
+  &__top {
+    margin: 60px 0 200px 0;
+  }
+  &--border {
+    border-top: 1px solid rgba(32, 36, 50, 0.5);
+    text-align: justify;
+    padding: 20px 0;
+    &:last-child {
+      border-bottom: 1px solid rgba(32, 36, 50, 0.5);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .paragraph {
+    &__top {
+      margin: 30px 0;
+    }
+  }
+}

@@ -3,7 +3,6 @@ include ../mixins/button.pug
 include ../mixins/success.pug
 include ..//mixins/paragraph.pug
 include ..//mixins/number.pug
-include ..//mixins/input.pug
 include ..//mixins/phones.pug
 include ..//mixins/mail.pug
 .main
@@ -14,8 +13,8 @@ include ..//mixins/mail.pug
      +heading('We differentiate ourselves by building strategic' , 'hero__heading')
      +paragraph('We differentiate ourselves by building strategic long-term partnerships with our clients and providing exceptional quality services at' , 'hero__paragraph')
      .hero__buttons
-      +button('Contact us', '#', 'page-contact', 'hero__button')
-      +button('Our services', '#', 'page-contact', 'button--secondary hero__button')
+      +button('Contact us', '#Contacts', 'page-contact', 'hero__button')
+      +button('Our services', '#Services', 'page-contact', 'button--secondary hero__button')
     .col-12.col-md-6
       img(src="./images/photo1.png" class="hero__image")
  section.features
@@ -33,25 +32,26 @@ include ..//mixins/mail.pug
         img(src="./images/chart3.png")
         h4.feature__heading.heading.heading__small Feature number three
         +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small') 
- section.development
+ section.development__description(id='About')
   .container.container--medium 
    +heading('We deliver full-cycle project development' , 'development__heading heading__medium') 
    .row
      .col-12.col-md-6
        img(src="./images/photo2.png") 
      .col-12.col-md-6
-      +paragraph('We identify your business objectives' , 'paragraph__small paragraph--border')
-      +paragraph('Set project plans and timelines' , 'paragraph__small paragraph--border')
-      +paragraph('Design interfaces and write use cases' , 'paragraph__small paragraph--border')
-      +paragraph('Create the overall look and feel of a product, develop UI and functionality' , 'paragraph__small paragraph--border')
-      +paragraph('Test the finished application, publish it to a store, and provide further support' , 'paragraph__small paragraph--border')
-   .row  
+      .development__description_item
+       +paragraph('We identify your business objectives' , 'paragraph__small paragraph--border ')
+       +paragraph('Set project plans and timelines' , 'paragraph__small paragraph--border ')
+       +paragraph('Design interfaces and write use cases' , 'paragraph__small paragraph--border ')
+       +paragraph('Create the overall look and feel of a product, develop UI and functionality' , 'paragraph__small paragraph--border  ')
+       +paragraph('Test the finished application, publish it to a store, and provide further support' , 'paragraph__small paragraph--border  ')
+   .row
      .col-12.col-md-6
-      +paragraph('Our Mission is to delight our clients in the quality of our software development service and provide an attractive job opportunity environment for our teams' , 'paragraph__small paragraph__development') 
+      .development__description_bottom
+       +paragraph('Our Mission is to delight our clients in the quality of our software development service and provide an attractive job opportunity environment for our teams' , 'paragraph__small paragraph__development') 
      .col-12.col-md-6
-      +paragraph('Our values shape the way we work with our clients, delivering outstanding user experience supported by cutting-edge technologies' , 'paragraph__small paragraph--top') 
-   .row  
-     .col-12.col-md-6.devbottom 
+      .development__description_bottom 
+       +paragraph('Our values shape the way we work with our clients, delivering outstanding user experience supported by cutting-edge technologies' , 'paragraph__small paragraph__top') 
  section.success-block
   .row
    .col-12.col-md-3
@@ -66,7 +66,7 @@ include ..//mixins/mail.pug
    .col-12.col-md-3
     +number('12'  )
     +success('Years of experience') 
- section.development-block
+ section.development-block(id='Services')
   .container.container--big 
    +heading('We deliver full-cycle project development' , 'development__heading heading__medium') 
    .row
@@ -98,7 +98,7 @@ include ..//mixins/mail.pug
       .feature__block 
        h4.developments__heading.heading.heading__small Outsourcing
        +paragraph('We differentiate ourselves by building strategic long-term partnerships with our ' , 'paragraph__small')      
- section.description
+ section.description(id="working")
   .container--description
    .row
     .col-12.col-md-6
@@ -109,14 +109,14 @@ include ..//mixins/mail.pug
     .col-12
       .about-us
         ul.about-us__list
-          each val, key in { 1: 'Project Kickoff', 2: 'Ideation and Evaluation', 3: 'Design Process', 4: 'Development Process' }
+          each val, key in { 01: 'Project Kickoff', 02: 'Ideation and Evaluation', 03: 'Design Process', 04: 'Development Process' }
             li.about-us__item
               .about-us-block
                 .about-us-block__count= key
                 .about-us-block__circle-container 
                   .about-us-block__circle
                 div.about-us-block__heading= val
- section.specialized 
+ section.specialized(id='Industries') 
   .container.container--specialized  
    +heading('Our team is specialized in a wide array of industry verticals' , 'development__heading heading__medium') 
    .row
@@ -163,8 +163,9 @@ include ..//mixins/mail.pug
      .col-12.col-md-3
       .specialization
        img(src="./images/icon-automotive.png")
-       +paragraph('Automotive' , 'specialized__paragraph paragraph__specialized')
- section.contacts
+       +paragraph('Automotive' , 'specialized__paragraph paragraph__specialized')           
+   
+ section.contacts(id='Contacts')
   .container.container--big 
    .row
     .col-12.col-md-6
@@ -173,9 +174,22 @@ include ..//mixins/mail.pug
        +paragraph('Get Custom Solutions, Recommendations, Resumes, or, Estimates. Confidentiality & Same Day Response Guaranteed! ' , 'feature__paragraph paragraph__contacts') 
     .col-12.col-md-6
       .contact
-       +input-text('','text' , 'Your Name')
-      .hero__buttons 
-       +button('Contact us', '#', 'page-contact', 'button--contact hero__button')
+       <form action="form-page" method="post">
+        <label for="name">
+         <input type="text" id="name" name="user_name" placeholder="Your name" class="input" autocomplete="off">
+        </label>
+        <label for="mail">
+         <input type="email" id="mail" name="user_mail" placeholder="Your mail" class="input" autocomplete="off">
+        </label>
+        <label for="company">
+         <input type="text" id="company" name="user_mail" placeholder="Your company" class="input" autocomplete="off">
+        </label>
+        <label for="message">
+         <input type="text" id="message" name="user_mail" placeholder="Your message" class="input" autocomplete="off">
+        </label>
+        .form__buttons  
+         button.form__button  Contact us 
+       </form>
  section.features
   .container--features
     .row 
@@ -196,6 +210,6 @@ include ..//mixins/mail.pug
        .feature
         img(src="./images/icon-mail.png")
         h4.heading.heading__small Email
-        a(href='mailto:deanna.curtis@example.com').paragraph__mail deanna.curtis@example.com
-
-
+        a(href='mailto:deanna.curtis@example.com').paragraph__mail deanna.curtis@example.com  
+ 
+                

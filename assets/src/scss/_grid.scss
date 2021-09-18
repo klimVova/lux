@@ -17,7 +17,7 @@
     max-width: 980px;
   }
   &--specialized {
-    max-width: 700px;
+    max-width: 800px;
   }
   &--features {
     max-width: 680px;
@@ -29,16 +29,20 @@
     background-color: $luxewill-black;
     border-radius: 20px;
     padding: 50px 160px;
+    @media (max-width: 767px) {
+      padding: 10px 10px;
+    }
   }
 }
+
 .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -10px;
-  margin-left: -10px;
+  margin-right: 0px;
+  margin-left: 0px;
 }
 
 .no-gutters {

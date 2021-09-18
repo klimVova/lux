@@ -21,12 +21,30 @@
       background-color: #e0dfdf;
     }
   }
-  &--contact {
-    background-color: $luxewill-black;
+}
+@media (max-width: 767px) {
+  .button {
+    font-size: 14px;
+    line-height: 20px;
+    border-radius: 33px;
+    padding: 10px 30px;
+  }
+}
+.form {
+  &__buttons {
+    padding: 40px 0 0;
+  }
+  &__button {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
     color: $luxewill-gray-three;
-
-    &:hover {
-      background-color: $luxewill-black;
-    }
+    background-color: $luxewill-black;
+    border-radius: 33px;
+    padding: 17px 49px;
+    text-decoration: none;
+    border: none;
   }
 }

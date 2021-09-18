@@ -4,5 +4,10 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 29px;
-  color: $luxewill-success;
+  color: $luxewill-gray-four;
+}
+@media (max-width: 767px) {
+  .success {
+    margin: 20px 0;
+  }
 }

@@ -5,8 +5,7 @@
 }
 @media (max-width: 767px) {
   .main {
-    padding: 60px 0 0 10px;
-    margin-left: 20px;
+    padding: 60px 0 0 0px;
   }
 }
 .hero {
@@ -15,17 +14,21 @@
   }
 
   &__paragraph {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   &__buttons {
     display: flex;
     justify-content: flex-start;
+    padding: 0 0 10px;
   }
 
   &__button {
     &:first-of-type {
       margin: 0 30px 0 0;
+      @media (max-width: 767px) {
+        margin: 0 10px 0 0;
+      }
     }
   }
   &__image {
@@ -47,12 +50,19 @@
 
 .development {
   padding: 70px 0 0;
-  background-color: $luxewill-gray-second;
-
+  &__description {
+    background-color: $luxewill-gray-second;
+  }
   &__heading {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 65px;
+  }
+  &__description_item {
+    margin-left: 50px;
+  }
+  &__description_bottom {
+    display: flex;
   }
 }
 
@@ -63,6 +73,9 @@
   @extend .container;
   @extend .container--big;
   transform: translateY(-50%);
+  @media (max-width: 767px) {
+    padding: 20px;
+  }
 }
 
 .development-block {
@@ -101,7 +114,7 @@
 }
 .specialization {
   max-width: 175px;
-  margin-bottom: 40px;
+  margin: 10px 0;
 }
 .contacts {
   background-color: $luxewill-primary;
@@ -117,109 +130,6 @@
   &__input {
     margin-left: 0px;
   }
-}
-.input-fons {
-  border-bottom: 1px solid black;
-  margin-bottom: 45px;
-  width: 300px;
-  background-color: $luxewill-primary;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0.01em;
-  border: none;
-  border-bottom: 1px solid black;
-
-  &:focus {
-    outline: none;
-  }
-  &::placeholder {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    color: ($luxewill-black, 0.6);
-  }
-}
-
-.description {
-  &__number {
-    font-family: Montserrat Alternates;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 30px;
-    line-height: 37px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    color: rgba(248, 248, 248, 0.2);
-    margin-top: 48px;
-    padding-bottom: 10px;
-
-    &::after {
-      content: "";
-      background-color: #fff;
-      border: 2px solid red;
-      height: 20px;
-      width: 20px;
-      border-radius: 50%;
-      -moz-border-radius: 50%;
-      -webkit-border-radius: 50%;
-      line-height: 50px;
-      position: absolute;
-      top: 90px;
-      left: 95px;
-    }
-  }
-
-  &__plans {
-    font-family: Oswald;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 27px;
-    text-align: center;
-    color: $luxewill-success;
-    margin: 23px auto 0;
-    width: 100px;
-
-    &::after {
-      content: "";
-      line-height: 50px;
-      text-align: center;
-      float: left;
-      padding: 0 8px;
-      border: 1px solid rgba(248, 248, 248, 0.2);
-      width: 203px;
-      margin-left: -10px;
-      position: absolute;
-      bottom: 70px;
-      left: 20px;
-    }
-  }
-}
-.circle {
-  background-color: #fff;
-  border: 2px solid red;
-  height: 20px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  width: 20px;
-  float: left;
-  line-height: 50px;
-}
-
-.line {
-  line-height: 50px;
-  text-align: center;
-  float: left;
-  padding: 0 8px;
-  border: 1px solid green;
-  width: 180px;
-  margin-top: -10px;
 }
 
 .about-us {
@@ -255,7 +165,7 @@
   }
 
   &__circle-container {
-    margin: 10px 0 0;
+    margin: 10px 0;
     overflow: hidden;
     position: relative;
 
@@ -299,9 +209,77 @@
   &__heading {
     font-family: "Oswald";
     font-size: 18px;
-    color: $luxewill-success;
+    color: $luxewill-gray-four;
     max-height: 27px;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+}
+@media (max-width: 767px) {
+  .about-us-block {
+    &__heading {
+      font-family: "Oswald";
+      font-size: 18px;
+      color: $luxewill-gray-four;
+      max-height: 27px;
+      overflow: initial;
+      text-overflow: ellipsis;
+      margin: 0 0 70px;
+    }
+  }
+}
+.input {
+  border-bottom: 1px solid black;
+  width: 100%;
+  min-width: 100px;
+  background-color: $luxewill-primary;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+  border: none;
+  border-bottom: 1px solid black;
+
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: ($luxewill-black, 0.6);
+  }
+}
+
+@media (max-width: 767px) {
+  .features {
+    margin: 20px 0;
+  }
+  .development {
+    &__description_item {
+      margin-left: 0px;
+    }
+  }
+  .success-block {
+    transform: translateY(0);
+  }
+  .development-block {
+    margin-bottom: 20px;
+  }
+  .specialized {
+    padding: 20px 0 20px;
+  }
+  .contacts {
+    padding: 10px 10px;
+  }
+  .contact {
+    padding-top: 10px;
+  }
+  .container--description {
+    padding: 10px 10px;
   }
 }
