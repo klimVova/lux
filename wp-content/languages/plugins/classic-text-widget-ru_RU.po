@@ -1,0 +1,47 @@
+# Translation of Plugins - Classic Text Widget - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Classic Text Widget - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-07-03 16:35:03+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Classic Text Widget - Stable (latest release)\n"
+
+#. Author URI of the plugin/theme
+msgid "https://victorfont.com/"
+msgstr "https://victorfont.com/"
+
+#. Author of the plugin/theme
+msgid "Victor Font Consulting Group, LLC."
+msgstr "Victor Font Consulting Group, LLC."
+
+#. Description of the plugin/theme
+msgid "Adds the pre 4.8 Classic WordPress text widget just like the good old days."
+msgstr "Добавляет старый добрый текстовый виджет как было до WordPress 4.8"
+
+#: lib/class-classic-wp-widget-text.php:121
+msgid "Automatically add paragraphs"
+msgstr "Добавлять параграфы автоматически"
+
+#: lib/class-classic-wp-widget-text.php:118
+msgid "Content:"
+msgstr "Содержание:"
+
+#: lib/class-classic-wp-widget-text.php:115
+msgid "Title:"
+msgstr "Название:"
+
+#. #-#-#-#-#  classic-text-widget-code.pot (Classic Text Widget 1.0.1) 
+#. #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: lib/class-classic-wp-widget-text.php:27
+msgid "Classic Text Widget"
+msgstr "Классический текстовый виджет"
+
+#: lib/class-classic-wp-widget-text.php:25
+msgid "The classic text widget for arbitrary html or text."
+msgstr "Классический текстовый виджет для html или текста."
